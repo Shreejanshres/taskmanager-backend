@@ -1,0 +1,33 @@
+# Node.js dependencies
+/node_modules/
+
+# Yarn configuration files
+yarn-error.log
+yarn-debug.log
+
+# npm configuration files
+npm-debug.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# Environment variables
+.env
+
+# MySQL related
+*.sql
+*.sql.gz
+
+# Backup files
+*.bak
+*.swp
+
+# Temporary files
+*.tmp
+*.temp
