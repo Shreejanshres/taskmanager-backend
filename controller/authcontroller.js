@@ -20,7 +20,8 @@ exports.register = async (req, res) => {
 		res.cookie("token", token, {
 			httpOnly: true,
 			secure: process.env.NODE_ENV === "production",
-			sameSite: "Strict",
+			sameSite: "None
+			",
 			maxAge: 3 * 60 * 60 * 1000,
 		});
 		res.status(201).json({ success: true });
@@ -46,7 +47,7 @@ exports.login = async (req, res) => {
 		res.cookie("token", token, {
 			httpOnly: true,
 			secure: process.env.NODE_ENV === "production",
-			sameSite: "Strict",
+			sameSite: "None",
 			maxAge: 3 * 60 * 60 * 1000, // 3 hours
 		});
 		res.status(200).json({ success: true });
