@@ -23,7 +23,7 @@ exports.register = async (req, res) => {
 			sameSite: "Strict",
 			maxAge: 3 * 60 * 60 * 1000,
 		});
-		res.status(201).json({ success: true });
+		res.status(201).json({ success: true,token });
 	} catch (err) {
 		res.status(500).json({ error: "Registration failed", detail: err.message });
 	}
