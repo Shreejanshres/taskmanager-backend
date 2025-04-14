@@ -15,6 +15,7 @@ const corsOptions = {
 	},
 	credentials: true,
 };
+const authRoutes = require("./routes/auth");
 const authMiddleware = require("./middleware/authmiddleware");
 
 const { sequelize, User, Task } = require("./models");
