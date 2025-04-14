@@ -7,7 +7,7 @@ const allowedOrigins = ["http://localhost:5173", "https://yourdomain.com"];
 
 const corsOptions = {
 	origin: (origin, callback) => {
-		if (allowedOrigins.includes(origin)) {
+		if (!origin || allowedOrigins.includes(origin)) {
 			callback(null, true);
 		} else {
 			callback(new Error("Not allowed by CORS"));
@@ -15,7 +15,6 @@ const corsOptions = {
 	},
 	credentials: true,
 };
-const authRoutes = require("./routes/auth");
 const authMiddleware = require("./middleware/authmiddleware");
 
 const { sequelize, User, Task } = require("./models");
